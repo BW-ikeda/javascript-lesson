@@ -111,4 +111,56 @@ let result1 = foo2();
 console.log(result1);
 
 // ↓応用問題
+// Q1
+let random= Math.floor(Math.random() * 10);
+console.log('0～9の乱数 => ', random);
 
+// Q2-1
+function output() {
+  console.log('これはコールバック関数の実行です');
+}
+
+setTimeout(function() {
+  console.log('Hello World!');
+  output();
+}, 3000);
+
+// Q2-2
+function printName(firstName, formatter) {
+  console.log(formatter(firstName));
+}
+
+const addIntro = (name) => '私の名前は' + name + 'です。';
+printName('池田', addIntro);
+
+// Q3
+let num =-1;
+
+if (num > 0) {
+  console.log('num is greater than 0');
+}else if (num === 0) {
+  console.log('num is 0');
+}else if (num < 0) {
+  console.log('num is less than 0');
+}
+
+// Q4
+let numbers = [];
+
+for (let i = 0; i < 100; i++) {
+  numbers.push (i);
+}
+console.log(numbers);
+
+// Q5
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+for (let item of mixed) {
+  if (typeof item !== 'number') {
+    console.log('not number');
+  } else if (item % 2 === 0) {
+    console.log('even');
+  } else {
+    console.log('odd');
+  }
+}
